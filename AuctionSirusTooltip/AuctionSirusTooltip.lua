@@ -64,12 +64,9 @@ AUCTION_PRICE_DATABASE = {}
 function addon:CHAT_MSG_ADDON(arg1, arg2, ...)
 	if arg1 == "ASMSG_AUCTION_LIST_BUCKETS_RESULT" then
 	--print(arg2)
-	local pricesort = string.gsub(arg2, ":%d+:0:0:0:", ' = ')
-	local pricesort2 = string.gsub(pricesort, ":%d+:%d+:0", "")
-	local pricesort3 = string.gsub(pricesort2, "%d+:0:1500", "")
-	local pricesort4 = string.gsub(pricesort3, ":%d+:%d+:%d+:%d+:", ' = ')
-	local pricesort5 = string.gsub(pricesort4, ":0:", ' = ')
-	local price = string.gsub(pricesort5, ":%d+:", ' = ')
+	local pricesort = string.gsub(arg2, ":%d+:%d+:%d+,", ",")
+	local pricesort2 = string.gsub(pricesort, ":%d+:%d+:%d+:%d+:", ' = ')
+	local price = string.gsub(pricesort2, "%d+:0:1500", "")
 	--print(price)
 		for s in string.gmatch(price, "[^,]+") do 
 		--print(s)
