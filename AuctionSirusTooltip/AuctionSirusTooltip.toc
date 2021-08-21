@@ -3,7 +3,7 @@
 ## Notes: Adds information about seller price, auction price, and spray cost.
 ## Notes-ruRU: Добавляет информацию о цене у продавца, на аукционе, а также стоимости распыления.
 ## Author: Фалафель
-## Version: 1
+## Version: 2
 ## SavedVariables: AUCTION_PRICE_DATABASE
 ## OptionalDeps: Ace2, RosterLib, FuBarPlugin-2.0, FuBar2Broker
 ## LoadManagers: AddonLoader
