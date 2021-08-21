@@ -310,7 +310,7 @@ function calculatordePrice(self,id,itemType,itemRarity,itemLevel)
 			end
 		elseif itemLevel >= 21 and itemLevel <= 25 then
 			if STRANGE_DUST ~= nil and GREATER_MAGIC ~= nil and SMALL_GLIMMERING ~= nil then		
-			local dePrice = (STRANGE_DUST/100*25*4)+(STRANGE_DUST/100*25*5)+(STRANGE_DUST/100*25*6)+(GREATER_MAGIC/100*7.5*1)+(GREATER_MAGIC/100*7.5*2)+(SMALL_GLIMMERING/100*5*1)	
+			local dePrice = (STRANGE_DUST/100*25*4)+(STRANGE_DUST/100*25*5)+(STRANGE_DUST/100*25*6)+(GREATER_MAGIC/100*7.5*1)+(GREATER_MAGIC/100*7.5*2)+(SMALL_GLIMMERING/100*10*1)	
 			sortdePrice(self,dePrice)
 			end
 		elseif itemLevel >= 26 and itemLevel <= 30 then	
