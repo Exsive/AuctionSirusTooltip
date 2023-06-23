@@ -32,7 +32,7 @@ local ARMOR  = "Доспехи"
 
 local function addLine(self,id,VendorPrice,dePriceResult,isItem)
 	local p = AUCTION_PRICE_DATABASE[id]	
-	if isItem and VendorPrice ~= nil and VendorPrice ~= 0 then
+	--[[ if isItem and VendorPrice ~= nil and VendorPrice ~= 0 then
 	    local gold = math.floor (VendorPrice/10000)
         local useless = VendorPrice - (gold*10000)
         local silver = math.floor (useless/100)
@@ -76,7 +76,7 @@ local function addLine(self,id,VendorPrice,dePriceResult,isItem)
 			if gold ~= 0 and silver >= 10 and silver <= 99 and copper >= 10 and copper <= 99 then
 			self:AddDoubleLine("Торговец:","|cffffffff"..gold..goldicon.." "..silver..silvericon.." "..copper..coppericon)
 			end
-	end	
+	end	 ]]
 	if isItem and p ~= nil and p ~= 0 and id then
         local gold = math.floor (p/10000)
         local useless = p - (gold*10000)
@@ -122,7 +122,7 @@ local function addLine(self,id,VendorPrice,dePriceResult,isItem)
 			self:AddDoubleLine("Аукцион:","|cffffffff"..gold..goldicon.." "..silver..silvericon.." "..copper..coppericon)
 			end
 	end
-	if isItem and dePriceResult ~= nil and dePriceResult ~= 0 then
+	--[[ if isItem and dePriceResult ~= nil and dePriceResult ~= 0 then
 		local gold = math.floor (dePriceResult/10000)
         local useless = dePriceResult - (gold*10000)
         local silver = math.floor (useless/100)
@@ -165,8 +165,8 @@ local function addLine(self,id,VendorPrice,dePriceResult,isItem)
 			end
 			if gold ~= 0 and silver >= 10 and silver <= 99 and copper >= 10 and copper <= 99 then
 			self:AddDoubleLine("Распыление:","|cffffffff"..gold..goldicon.." "..silver..silvericon.." "..copper..coppericon)
-			end
-	end
+			end ]]
+--[[ 	end ]]
 end
 
 hooksecurefunc("SetItemRef", function(link, ...)
